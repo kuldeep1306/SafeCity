@@ -1,0 +1,243 @@
+/* Page setup */
+.contact-page {
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Header */
+.contact-header h1 {
+  font-size: 26px;
+  color: #3b82f6;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-header p {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Section */
+.contact-section {
+  background-color: #111;
+  border: 1px solid #1e40af;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(29, 78, 216, 0.3);
+}
+
+/* Grid layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Quick Calls */
+.quick-calls h2 {
+  color: #60a5fa;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.button-grid button {
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button-grid button:hover {
+  background: linear-gradient(to right, #1d4ed8, #3b82f6);
+  transform: scale(1.03);
+}
+
+.small-text {
+  font-size: 12px;
+  color: #d1d5db;
+}
+.big-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Location buttons */
+.location-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.location-buttons button {
+  background-color: transparent;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  color: #93c5fd;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.location-buttons button:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* SOS button */
+.sos-section {
+  text-align: center;
+}
+
+.sos-btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #dc2626, #2563eb);
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
+  transition: transform 0.2s;
+}
+
+.sos-btn:hover {
+  transform: scale(1.05);
+}
+
+.hint {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Status section */
+.status-section {
+  margin-top: 20px;
+}
+
+.status-text {
+  color: #93c5fd;
+  font-size: 14px;
+}
+
+.message-box {
+  margin-top: 8px;
+  background-color: #000;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  color: #3b82f6;
+}
+
+.last-location {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Footer */
+.contact-footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.modal {
+  background-color: #111;
+  border: 1px solid #1d4ed8;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+.modal h3 {
+  font-size: 18px;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+
+.modal p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #666;
+  color: #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.confirm-btn {
+  background: linear-gradient(to right, #dc2626, #2563eb);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-tip {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
