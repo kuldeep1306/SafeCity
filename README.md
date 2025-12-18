@@ -9,7 +9,7 @@ A web-based application to manage crime-related data, including user management,
 - Crime Data Management: Add, view, and update crime-related information.  
 - User Management: Login, profile management, and role-based access.  
 - Real-time Chatbot: AI-powered chatbot for crime-related queries.  
-- Geography & Mapping: Visualize crimes on interactive maps.  
+- CaseInfo & Mapping: Visualize crimes on interactive maps.  
 - Protected Routes: Restrict unauthorized access to sensitive pages.  
 
 ---
