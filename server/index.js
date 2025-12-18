@@ -11,6 +11,8 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import reportsRoutes from "./routes/reports.js";
 import userRouter from "./routes/userRouter.js";
+import feedbackRoutes from "./routes/feedbackRoutes.js";
+
 
 import User from "./models/User.js";
 
@@ -38,6 +40,9 @@ app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/reports", reportsRoutes);
 app.use("/user", userRouter);
+app.use("/uploads", express.static("uploads"));
+app.use("/api/tips", feedbackRoutes);
+
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;

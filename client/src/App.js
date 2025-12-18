@@ -7,7 +7,7 @@ import { themeSettings } from "theme";
 import Layout from "scenes/layout";
 import Dashboard from "scenes/dashboard";
 import CrimeData from "scenes/crimeData";
-import Geography from "scenes/geography/CaseStats";
+import CaseInfo from "scenes/caseinfo/CaseStats";
 import Chatbot from "scenes/chatbot";
 import Contact from "scenes/Contact";
 import Admin from "scenes/admin";
@@ -19,6 +19,8 @@ import PageNotFound from "scenes/protected/404page";
 import Map from "scenes/map";
 import AddDetails from "scenes/crimeData/addDetails";
 import Feedback from "scenes/feedback/feedback";
+import AdminFeedback from "scenes/admin/AdminFeedback";
+import AdvancedFeatures from "AdvanceFeatures.jsx";
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -36,7 +38,7 @@ function App() {
               <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Dashboard />} />
               <Route path="/crimedata" element={<CrimeData />} />
-              <Route path="/geography" element={<Geography />} />
+              <Route path="/caseinfo" element={<CaseInfo />} />
               <Route path="/chatbot" element={<Chatbot />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/users" element={<Admin />} />
@@ -44,6 +46,11 @@ function App() {
               <Route path="/add" element={<AddDetails />} />
               <Route path="/*" element={<PageNotFound />} />
               <Route path="/feedback" element={<Feedback/>}/>
+              <Route path="/admin/feedback" element={<AdminFeedback />} />
+              <Route path="/features" element={<AdvancedFeatures />} />
+
+
+
             </Route>
           </Routes>
         </ThemeProvider>

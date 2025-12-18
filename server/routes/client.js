@@ -1,7 +1,7 @@
 import express from "express";
 import {
   getCrimeData,
-  getGeography,
+  getCaseInfo,
   createCrimeData,
   DeleteCrimeData,
   updateCrimeStatus,
@@ -14,8 +14,8 @@ const router = express.Router();
 // ✅ Get all crime data
 router.get("/crimedata", getCrimeData);
 
-// ✅ Get aggregated geography data (optional)
-router.get("/geography", getGeography);
+// ✅ Get aggregated caseinfo data (optional)
+router.get("/caseinfo", getCaseInfo);
 
 // ✅ Create new crime record (requires authentication)
 router.post("/", auth, createCrimeData);

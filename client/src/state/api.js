@@ -6,7 +6,7 @@ export const api = createApi({
   tagTypes: [
     "User",
     "CrimeData",
-    "Geography",    
+    "CaseInfo",    
     "Admins",    
     "Dashboard",
     "Reports",
@@ -25,9 +25,9 @@ export const api = createApi({
       }),
       providesTags: ["CrimeData"],
     }),
-    getGeography: build.query({
-      query: () => "client/geography",
-      providesTags: ["Geography"],
+    getCaseInfo: build.query({
+      query: () => "client/caseinfo",
+      providesTags: ["CaseInfo"],
     }),    
     getAdmins: build.query({
       query: () => "management/admins",
@@ -52,7 +52,7 @@ export const {
   useGetUserQuery,
   useGetUsersQuery,
   useGetCrimeDataQuery,  
-  useGetGeographyQuery,
+  useGetCaseInfoQuery,
   useGetAdminsQuery,  
   useGetDashboardQuery,
   useGetReportsQuery

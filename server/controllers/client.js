@@ -147,8 +147,8 @@ export const updateCrimeStatus = tryCatch(async (req, res) => {
 
 
 
-// ✅ Get geography data (simplified, no crg)
-export const getGeography = tryCatch(async (req, res) => {
+// ✅ Get caseinfo data (simplified, no crg)
+export const getCaseInfo = tryCatch(async (req, res) => {
   const crimeData = await CrimeData.find();
   const sourceData = crimeData.length > 0 ? crimeData : localData;
 
